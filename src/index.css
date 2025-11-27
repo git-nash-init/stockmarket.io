@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Stock Market Education Design System */
+
+@layer base {
+  :root {
+    /* Brand Colors - Stock Market Education Theme */
+    --background: 42 100% 98.6%;
+    /* #fffbf7 - warm cream */
+    --foreground: 222 84% 4.9%;
+    /* dark text */
+
+    --card: 42 100% 98.6%;
+    --card-foreground: 222 84% 4.9%;
+
+    --popover: 42 100% 98.6%;
+    --popover-foreground: 222 84% 4.9%;
+
+    --primary: 48 100% 52%;
+    /* #ffc907 - golden accent */
+    --primary-foreground: 222 84% 4.9%;
+
+    --secondary: 42 50% 94%;
+    /* light cream variant */
+    --secondary-foreground: 222 84% 4.9%;
+
+    --muted: 42 30% 92%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 48 100% 52%;
+    /* golden accent */
+    --accent-foreground: 222 84% 4.9%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 42 100% 98%;
+
+    --border: 42 20% 88%;
+    --input: 42 20% 88%;
+    --ring: 48 100% 52%;
+
+    --radius: 0.75rem;
+
+    /* Custom Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(48 100% 52%), hsl(45 100% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(42 100% 98.6%), hsl(48 100% 95%));
+    --gradient-card: linear-gradient(135deg, hsl(42 100% 98.6%), hsl(42 80% 96%));
+
+    --shadow-soft: 0 4px 20px -2px hsl(48 100% 52% / 0.1);
+    --shadow-glow: 0 0 30px hsl(48 100% 52% / 0.2);
+    --shadow-card: 0 8px 30px -5px hsl(222 84% 4.9% / 0.1);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode - Stock Market Theme */
+    --background: 222 84% 4.9%;
+    /* dark background */
+    --foreground: 42 100% 98%;
+    /* light text */
+
+    --card: 222 84% 6%;
+    --card-foreground: 42 100% 98%;
+
+    --popover: 222 84% 6%;
+    --popover-foreground: 42 100% 98%;
+
+    --primary: 48 100% 52%;
+    /* keep golden accent */
+    --primary-foreground: 222 84% 4.9%;
+
+    --secondary: 217 32% 17.5%;
+    --secondary-foreground: 42 100% 98%;
+
+    --muted: 217 32% 17.5%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 48 100% 52%;
+    /* golden accent */
+    --accent-foreground: 222 84% 4.9%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 42 100% 98%;
+
+    --border: 217 32% 17.5%;
+    --input: 217 32% 17.5%;
+    --ring: 48 100% 52%;
+
+    /* Dark Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(48 100% 52%), hsl(45 100% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(222 84% 4.9%), hsl(222 84% 6%));
+    --gradient-card: linear-gradient(135deg, hsl(222 84% 6%), hsl(222 84% 8%));
+
+    --shadow-soft: 0 4px 20px -2px hsl(48 100% 52% / 0.3);
+    --shadow-glow: 0 0 30px hsl(48 100% 52% / 0.4);
+    --shadow-card: 0 8px 30px -5px hsl(0 0% 0% / 0.5);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+
+  /* Custom Gradient Utilities */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+
+  /* Custom Shadow Utilities */
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Custom Transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* Stock Market Theme Utilities */
+  .hover-lift {
+    @apply transition-smooth hover:transform hover:-translate-y-1 hover:shadow-glow;
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
