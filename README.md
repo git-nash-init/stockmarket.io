@@ -4,6 +4,8 @@
 
 A comprehensive React/TypeScript application built with Vite for learning stock market trading and analysis. This platform provides educational modules, market data visualization, and user management features.
 
+![TheStockMarket.io screenshot](docs/screenshots/thestockmarket-io.png)
+
 ## 🚀 Features
 
 - **Educational Modules**: Comprehensive learning modules for stock market education
